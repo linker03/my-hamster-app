@@ -1,7 +1,3 @@
-.swiperWrapper :global .swiper-wrapper {
-  width: 90%;
-}
-
 .swiperWrapper :global .swiper-slide {
   text-align: center;
 }
@@ -9,10 +5,12 @@
 .swiperWrapper :global .swiper-slide img {
   transition: 0.3s all ease-in-out;
   opacity: 0.5;
+  filter: grayscale(1);
 }
 
 .swiperWrapper :global .swiper-slide-active img {
   opacity: 1;
+  filter: grayscale(0);
 }
 
 .arrowImage {

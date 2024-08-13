@@ -15,13 +15,13 @@ export const Carousel = () => {
       <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         className={styles.swiperWrapper}
-        slidesPerView={4}
+        slidesPerView={4.9}
         spaceBetween={10}
         modules={[Navigation, EffectCoverflow]}
         centeredSlides
         effect="coverflow"
         coverflowEffect={{
-          modifier: 1,
+          modifier: 1.1,
           rotate: 0,
           slideShadows: false,
           scale: 0.9,

@@ -1,0 +1,1 @@
+export { UpgradePanel } from './UpgradePanel';

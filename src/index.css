@@ -3,16 +3,27 @@
   /* colors */
   --navigation-color: #fdfdff;
   --button-black: #030809;
+  --border: #25362e;
+  --upgrade-text: #a7a7a7;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 body {
+  flex: 1;
   margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  max-width: 100lvw;
+  background-color: black;
 }
 
 img {
   width: 100%;
   height: auto;
+}
+
+#root {
+  height: 100%;
 }

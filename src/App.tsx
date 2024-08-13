@@ -4,12 +4,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 import { Carousel } from './components/Carousel';
+import { UpgradePanel } from './components/UpgradePanel';
 
 function App() {
   return (
-    <div>
+    <>
       <Carousel />
-    </div>
+      <UpgradePanel />
+      <img className="footer" src="/footer.png" alt="" />
+    </>
   );
 }
 
