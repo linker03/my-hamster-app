@@ -5,12 +5,15 @@ import { Button } from '../Button/Button';
 import { useRef } from 'react';
 import { Swiper as SwiperClass } from 'swiper/types';
 import clsx from 'clsx';
+import { Rank } from '../../types/Rank';
 
-const ranks = ['acolyte', 'deacon', 'priest', 'bishop', 'archbishop'];
+interface CarouselProps {
+  ranks: Rank[];
+  onSlideChange(rank: string): void;
+}
 
-export const Carousel = () => {
+export const Carousel = ({ ranks, onSlideChange }: CarouselProps) => {
   const swiperRef = useRef<SwiperClass | null>(null);
-  console.log(swiperRef);
 
   return (
     <div style={{ width: '100%' }}>
@@ -29,11 +32,14 @@ export const Carousel = () => {
           scale: 0.9,
           stretch: 10,
         }}
+        onSlideChange={(swiper) =>
+          onSlideChange(ranks[swiper.activeIndex].rankName)
+        }
       >
         {ranks.map((rank) => (
-          <SwiperSlide key={rank}>
-            <img src={`/${rank}.png`} alt={rank} />
-            <p className={styles.rankTitle}>{rank}</p>
+          <SwiperSlide key={rank.rankName}>
+            <img src={`/${rank.rankName}.png`} alt={rank.rankName} />
+            <p className={styles.rankTitle}>{rank.rankName}</p>
           </SwiperSlide>
         ))}
 

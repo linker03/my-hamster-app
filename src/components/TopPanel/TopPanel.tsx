@@ -18,7 +18,7 @@ export const TopPanel = ({ score = 999999999 }: TopPanelProps) => {
       </div>
       <p className={styles.score}>
         <img src="/token-white.png" alt="" />
-        <p>{formattedNumber}</p>
+        <span>{formattedNumber}</span>
       </p>
       <div className={styles.buttons}>
         <Button>

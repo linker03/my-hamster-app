@@ -3,14 +3,14 @@ import styles from './UpgradePanel.module.css';
 
 interface UpgradePanelProps {
   isDisabled?: boolean;
-  sum: string;
+  sum: number;
   text: string;
   onClick(): void;
 }
 
 export const UpgradePanel = ({
   isDisabled,
-  sum = '0',
+  sum = 0,
   text,
   onClick,
 }: UpgradePanelProps) => {

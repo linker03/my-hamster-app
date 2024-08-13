@@ -9,7 +9,10 @@ export const ProgressBar = ({
   totalLevels = 1,
   currentLevel = 0,
 }: ProgressBarProps) => {
-  const targetProgress = Math.floor((100 / totalLevels) * (currentLevel + 1));
+  const targetProgress =
+    totalLevels === currentLevel
+      ? 100
+      : Math.floor((100 / totalLevels) * (currentLevel + 1));
   const currentProgress = Math.floor((100 / totalLevels) * currentLevel);
   return (
     <div className={styles.root}>

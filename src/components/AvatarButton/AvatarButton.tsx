@@ -3,14 +3,16 @@ import styles from './AvatarButton.module.css';
 interface AvatarButtonProps {
   currentRank: string;
   playerName?: string;
+  raiseScore(): void;
 }
 
 export const AvatarButton = ({
   currentRank,
   playerName = '-',
+  raiseScore,
 }: AvatarButtonProps) => {
   return (
-    <button className={styles.root}>
+    <button className={styles.root} onClick={raiseScore}>
       <div className={styles.avatarHalo}>
         <img className={styles.avatar} src="/avatar.png" alt="" />
         <p className={styles.avatarName}>{playerName}</p>
