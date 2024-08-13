@@ -1,0 +1,26 @@
+.root {
+  border: 1px solid var(--progress);
+  height: 10px;
+  padding: 1px;
+  width: 100%;
+  border-radius: 8px;
+  position: relative;
+}
+
+.progress {
+  height: 6px;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  background-color: var(--progress);
+  transition: all 0.3s ease-in;
+}
+
+.targetProgress {
+  height: 6px;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  background-color: var(--target-progress);
+  transition: all 0.3s ease-in;
+}
