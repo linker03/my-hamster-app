@@ -8,10 +8,12 @@ import { UpgradePanel } from './components/UpgradePanel';
 import { ProgressBar } from './components/ProgressBar';
 import { AvatarButton } from './components/AvatarButton';
 import { TopPanel } from './components/TopPanel';
+import { Header } from './components/Header';
 
 function App() {
   return (
     <>
+      <Header />
       <TopPanel />
       <div className="content-container">
         <AvatarButton currentRank="acolyte" playerName="Jugglerez" />

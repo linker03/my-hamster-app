@@ -1,0 +1,43 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+.backButton {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 13.06px;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.backButton img {
+  margin-right: 10px;
+  width: 5px;
+}
+
+.appTitle {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 15.23px;
+  text-align: center;
+}
+
+.appTitle p {
+  font-size: 8px;
+  font-weight: 300;
+  line-height: 8.7px;
+  text-align: center;
+  color: #949494;
+}
+
+.menuButton {
+  width: 32px;
+  height: 32px;
+  padding: 10px;
+}
