@@ -1,0 +1,34 @@
+.swiperWrapper :global .swiper-wrapper {
+  width: 90%;
+}
+
+.swiperWrapper :global .swiper-slide {
+  text-align: center;
+}
+
+.swiperWrapper :global .swiper-slide img {
+  transition: 0.3s all ease-in-out;
+  opacity: 0.5;
+}
+
+.swiperWrapper :global .swiper-slide-active img {
+  opacity: 1;
+}
+
+.arrowImage {
+  height: 10px;
+}
+
+button.navigationButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateZ(10px);
+  z-index: 2;
+}
+
+button.navigationButtonPrev {
+  left: 8px;
+}
+button.navigationButtonNext {
+  right: 8px;
+}
