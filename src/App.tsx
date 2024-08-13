@@ -6,11 +6,13 @@ import 'swiper/css/navigation';
 import { Carousel } from './components/Carousel';
 import { UpgradePanel } from './components/UpgradePanel';
 import { ProgressBar } from './components/ProgressBar';
+import { AvatarButton } from './components/AvatarButton';
 
 function App() {
   return (
     <>
       <div className="content-container">
+        <AvatarButton currentRank="acolyte" playerName="Jugglerez" />
         <Carousel />
         <ProgressBar totalLevels={3} currentLevel={1} />
         <UpgradePanel />
