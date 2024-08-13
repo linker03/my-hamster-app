@@ -1,0 +1,32 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 0 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons button {
+  padding: 7px;
+  color: var(--upgrade-text);
+  font-size: 14px;
+  z-index: 2;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  text-align: center;
+}
+
+.score img {
+  width: 18px;
+  margin-right: 6px;
+}
