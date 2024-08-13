@@ -6,6 +6,8 @@ import { useRef } from 'react';
 import { Swiper as SwiperClass } from 'swiper/types';
 import clsx from 'clsx';
 
+const ranks = ['acolyte', 'deacon', 'priest', 'bishop', 'archbishop'];
+
 export const Carousel = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
   console.log(swiperRef);
@@ -28,21 +30,13 @@ export const Carousel = () => {
           stretch: 10,
         }}
       >
-        <SwiperSlide>
-          <img src="/acolyte.png" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/deacon.png" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/priest.png" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/bishop.png" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/archbishop.png" alt="" />
-        </SwiperSlide>
+        {ranks.map((rank) => (
+          <SwiperSlide key={rank}>
+            <img src={`/${rank}.png`} alt={rank} />
+            <p className={styles.rankTitle}>{rank}</p>
+          </SwiperSlide>
+        ))}
+
         <Button
           className={clsx(styles.navigationButton, styles.navigationButtonPrev)}
           onClick={() => swiperRef.current?.slidePrev()}

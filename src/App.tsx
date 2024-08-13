@@ -10,8 +10,8 @@ import { ProgressBar } from './components/ProgressBar';
 function App() {
   return (
     <>
-      <Carousel />
       <div className="content-container">
+        <Carousel />
         <ProgressBar totalLevels={3} currentLevel={1} />
         <UpgradePanel />
       </div>
